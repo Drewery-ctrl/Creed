@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900');
+@import 'mixings/_mixings.scss';
+
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+//Circle shape in header
+.circle {
+  @include breakpoint(mobile) {
+    position: absolute;
+    width: 260px;
+    top: -150px;
+    left: 200px;
+  }
+  @include breakpoint(laptop) {
+    top: -180px;
+    left: 890px;
+    width: 280px;
+    z-index: -1;
+  }
+}
+
+//Triangle shape in header
+.triangle {
+  @include breakpoint(mobile) {
+    position: absolute;
+    left: 220px;
+    top: 90px;
+    width: 240px;
+  }
+  @include breakpoint(laptop) {
+    left: 960px;
+    top: 38px;
+    z-index: -1;
+  }
+}
+
+//Shape encapsulating Circle and Triangle
+.shapes {
+  overflow: hidden;
+  position: absolute;
+  background: #4D0766;
+  width: 100%;
+  color: white;
+  z-index: -1;
+
+  @include breakpoint(laptop) {
+    height: 140px !important;
+    top: 50px;
+  }
+  @include breakpoint(mobile) {
+    height: 200px;
+    padding: 30px 0;
+  }
+}
+
+//Hamburger above header
+.hamburger {
+  margin-left: 50px;
+  @include breakpoint(mobile){
+    margin-left: 20px;
+    margin-top: 20px !important;
+    padding-top: 10px !important;
+  }
+}
+
+//Header Section
+header {
+  margin-bottom: -19px !important;
+  h1 {
+    color: white;
+    position: absolute;
+  }
+
+  @include breakpoint(mobile) {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+  }
+
+  // Header title area
+  .h-t {
+    @include breakpoint(laptop) {
+      top: 100px !important;
+      left: 316px !important;
+      font-family: "SpaceMono-Regular", Arial, Helvetica, sans-serif;
+      width: 900px !important;
+    }
+
+    @include breakpoint(mobile) {
+      text-align: center;
+      width: 200px;
+      left: 90px;
+      top: 80px;
+    }
+  }
+
+  //Text gradient in header
+  .text-gradient {
+    background: -webkit-linear-gradient(60deg, #E9B115, #EC58C8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "SpaceMono", Arial, Helvetica, sans-serif;
+  }
+}

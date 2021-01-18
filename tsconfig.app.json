@@ -2,8 +2,25 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": [
+        "app/*"
+      ],
+      "@components/*": [
+        "src/app/components/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@data/*": [
+        "src/app/data/*"
+      ]
+    }
   },
   "files": [
     "src/main.ts",

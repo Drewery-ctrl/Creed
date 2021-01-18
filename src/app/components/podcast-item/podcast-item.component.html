@@ -1,0 +1,50 @@
+<div class="wrapper" *ngIf="pcList.keyword === 'Web Design'">
+  <div>
+    <!--    Images-->
+    <img src="{{pcList.image}}" alt="placeholder" class="pcImage"/>
+  </div>
+
+  <div class="info">
+    <!--      Title-->
+    <h4 class="header-title">{{ pcList.title }}</h4>
+
+    <!--      Publishers-->
+    <p class="meta">
+      by <span class="author"
+               *ngIf="pcList.publisher === 'Design Review' else restTemplate">
+      <span class="warning">{{ pcList.publisher }}</span>
+      </span>
+
+      <ng-template #restTemplate>
+        <span class="author">{{ pcList.publisher }}</span>
+      </ng-template>
+    </p>
+
+    <!--      Total Episodes-->
+    <p class="meta">{{ pcList.total_episodes }} episodes</p>
+
+    <!--    horizontal line-->
+    <hr class="divide">
+
+    <!--      Logos-->
+    <div class="logo">
+      <div>
+        <img src="/assets/svg/apple.svg" alt="apple logo">
+        ITUNES
+      </div>
+      <div>
+        <img src="/assets/svg/link.svg" alt="apple logo">
+        WEB
+      </div>
+      <div>
+        <img src="/assets/svg/rss.svg" alt="apple logo">
+        RSS
+      </div>
+    </div>
+  </div>
+  <!--  Description-->
+  <div class="description">
+    <p>{{ pcList.description }}</p>
+  </div>
+</div>
+

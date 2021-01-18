@@ -1,0 +1,7 @@
+<div class="container">
+  <ol *ngFor="let podcastList of podcasts">
+    <app-podcast-item *ngFor="let pcList of podcastList.podcasts | sortBy:'asc': 'rank'"
+                      [pcList]="pcList"></app-podcast-item>
+  </ol>
+</div>
+
