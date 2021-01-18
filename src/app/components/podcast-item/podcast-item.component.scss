@@ -1,13 +1,19 @@
 @import 'src/app/mixings/_mixings.scss';
 
+// variables
+$border-white: #fff;
+$border-shadow: #DDA0DD;
+$author-color: #8e44ad;
+$warning: #FF7F50;
+
 //Wrapper
 .wrapper {
   position: relative;
   border-radius: 8px;
-  border: 1px solid #fff;
+  border: 1px solid $border-white;
   margin: 0 auto 40px;
   transition: box-shadow 0.2s ease-in-out;
-  box-shadow: 1px 1px 10px 1px #DDA0DD;
+  box-shadow: 1px 1px 10px 1px $border-shadow;
 
   @include breakpoint(mobile) {
     top: 80px;
@@ -123,9 +129,9 @@ div.info {
   font-size: 14px;
 }
 
-// Author
+// Author / Publisher
 .author {
-  color: #8e44ad;
+  color: $author-color;
 }
 
 // Horizontal Divide Line
@@ -133,7 +139,7 @@ div.info {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1.2px solid #ccc;
+  border-top: 1.2px solid #cccccc;
   padding: 0;
   @include breakpoint(mobile) {
     width: 200px;
@@ -154,5 +160,5 @@ div.info {
 }
 
 .warning, {
-  color: #FF7F50;
+  color: $warning;
 }
